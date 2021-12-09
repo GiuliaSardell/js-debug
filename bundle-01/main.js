@@ -11,7 +11,7 @@
 
 
 // ESERCIZIO 1
-for (let i = 0; i > 5; i++) {
+for (let i = 0; i < 5; i++) {
     console.log(i);
 }
 /*******************************************************************************
@@ -28,7 +28,7 @@ for (let i = 0; i > 5; i++) {
 
 // ESERCIZIO 2
 function addIfEven(num) {
-    if (num % 2 = 0) {
+    if (num % 2 == 0) {
         return num + 5;
     }
     return num;
@@ -47,7 +47,7 @@ function addIfEven(num) {
 
 // ESERCIZIO 3
 function loopToFive() {
-    for (let i = 0, i < 5, i++) {
+    for (let i = 0; i < 5; i++) {
         console.log(i);
     }
 }
@@ -59,7 +59,7 @@ function loopToFive() {
     le istruzioni che il ciclo for deve compiere vanno divise tra di loro tramite ; e non ,
     
     quindi for (let i = 0; i < 5; i++)
-    un numero è pari se il suo %2 è pari a 0, cioè num % 2 == 0
+
     3- Sono presenti errori logici?
 
 
@@ -69,27 +69,30 @@ function loopToFive() {
 function displayEvenNumbers() {
     let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
     let evenNumbers = [];
-    for (let i = 0; i < numbers.length - 1; i++;) {
-        if (numbers % 2 = 0); {
-            evenNumbers.push(i);
+
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 2 == 0); {
+            evenNumbers.push(numbers[i]);
         }
         return evenNumbers;
     }
 }
 displayEvenNumbers(); // dovrebbe restituire [2,4,6,8]
 
+
+
 /*******************************************************************************
 
     1- Che cosa fa questo codice?
     funzione che, dato un array di numeri, aggiunge i numeri pari ad un altro array
     2- Sono presenti errori di sintassi
-    1. let numbers e let evenNumbersdeve essere definito fuori dalla funzione
-    2. la funzione deve essere richiamata prima della sua definizione (le funzioni si scrivono in fondo)
-    3.mettendo come condizione numbers.length - 1 il ciclo for non legge l'ultimo elemento dell'array
-    4.il ; dopo l'incremento della variabile i non va messo
-    5.numbers[i] non numbers che è l'intero array
-    6. % 2 == 0 , con un singolo = si definiscono le variabili
-    7.evenNumbers.push(i) in questo modo si aggiunge dentro l'array la variabile i, evenNumbers.push(numbers[i]) così il numero corrispondente alla variabile i
+
+    la funzione deve essere richiamata prima della sua definizione (le funzioni si scrivono in fondo)
+    mettendo come condizione numbers.length - 1 il ciclo for non legge l'ultimo elemento dell'array
+    il ; dopo l'incremento della variabile i non va messo
+    numbers[i] non numbers che è l'intero array
+    % 2 == 0 , con un singolo = si definiscono le variabili
+    evenNumbers.push(i) in questo modo si aggiunge dentro l'array la variabile i, evenNumbers.push(numbers[i]) così il numero corrispondente alla variabile i
 
 
 
